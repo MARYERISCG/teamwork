@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Universidad de Cartagena</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body class="bg-warning">
+    <div class="container text-center mt-5">
+        <div id="welcome">
+            <h1 class="text-black"><b>Bienvenido a la Encuesta de la Universidad de Cartagena</b></h1>
+            <p><b><i>Esta encuesta es solo para miembros de la Universidad de Cartagena.</i></b></p>
+            <form id="initialForm">
+                <div class="form-group">
+                    <label for="fullName"><b>Nombre completo:</b></label>
+                    <input type="text" class="form-control" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentCode"><b>Código:</b></label>
+                    <input type="text" class="form-control" id="studentCode" required>
+                </div>
+                <div class="form-group">
+                    <label><b>Género:</b></label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="masculino" required>
+                        <label class="form-check-label" for="genderMale"><b>Masculino</b></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="femenino" required>
+                        <label class="form-check-label" for="genderFemale"><b>Femenino</b></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderOther" value="otro" required>
+                        <label class="form-check-label" for="genderOther"><b>Otro</b></label>
+                    </div>
+                </div>
+                <button id="startButton" class="btn btn-warning btn-lg"><b>Iniciar Encuesta</b></button>
+            </form>
+        </div>
+
+        <div id="survey" style="display: none;">
+            <h2 class="text-black"><b>Cuestionario</b></h2>
+            <form id="surveyForm">
+
+                <div class="card mb-3 border-warning ">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>1. ¿Cómo calificaría el lugar donde está ubicado el centro tutorial Cerete?</b></h5>
+                        <div class="form-group">
+                            <select class="form-control" id="locationRating" required>
+                                <option value="">Seleccione</option>
+                                <option value="excelente">Excelente</option>
+                                <option value="bueno">Bueno</option>
+                                <option value="regular">Regular</option>
+                                <option value="malo">Malo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3 border-warning ">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>2. ¿Qué le parece el espacio de los salones?</b></h5>
+                        <div class="form-group">
+                            <select class="form-control" id="classroomSpaceRating" required>
+                                <option value="">Seleccione</option>
+                                <option value="excelente">Excelente</option>
+                                <option value="bueno">Bueno</option>
+                                <option value="regular">Regular</option>
+                                <option value="malo">Malo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3 border-warning ">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>3. ¿Cómo calificaría la calidad de los útiles dentro de las aulas (sillas, tableros, mesas)?</b></h5>
+                        <div class="form-group">
+                            <select class="form-control" id="materialQualityRating" required>
+                                <option value="">Seleccione</option>
+                                <option value="excelente">Excelente</option>
+                                <option value="bueno">Bueno</option>
+                                <option value="regular">Regular</option>
+                                <option value="malo">Malo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3 border-warning ">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>4. ¿Cómo calificaría la calidad de las tutorías?</b></h5>
+                        <div class="form-group">
+                            <select class="form-control" id="tutoringQualityRating" required>
+                                <option value="">Seleccione</option>
+                                <option value="excelente">Excelente</option>
+                                <option value="bueno">Bueno</option>
+                                <option value="regular">Regular</option>
+                                <option value="malo">Malo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3 border-warning ">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>5. ¿Qué le parece el tiempo estimado para cada tutoría?</b></h5>
+                        <div class="form-group">
+                            <select class="form-control" id="tutoringTimeRating" required>
+                                <option value="">Seleccione</option>
+                                <option value="excelente">Excelente</option>
+                                <option value="bueno">Bueno</option>
+                                <option value="regular">Regular</option>
+                                <option value="malo">Malo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3 border-warning">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>6. ¿Qué le parece la modalidad semipresencial de solo ir los sábados?</b></h5>
+                        <div class="form-group">
+                            <select class="form-control" id="blendedModeRating" required>
+                                <option value="">Seleccione</option>
+                                <option value="excelente">Excelente</option>
+                                <option value="bueno">Bueno</option>
+                                <option value="regular">Regular</option>
+                                <option value="malo">Malo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3 border-warning ">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>7. ¿Cómo calificaría la cafetería del centro tutorial?</b></h5>
+                        <div class="form-group">
+                            <select class="form-control" id="cafeteriaRating" required>
+                                <option value="">Seleccione</option>
+                                <option value="excelente">Excelente</option>
+                                <option value="bueno">Bueno</option>
+                                <option value="regular">Regular</option>
+                                <option value="malo">Malo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3 border-warning ">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>8. ¿Qué le parece el estacionamiento del centro tutorial?</b></h5>
+                        <div class="form-group">
+                            <select class="form-control" id="parkingRating" required>
+                                <option value="">Seleccione</option>
+                                <option value="excelente">Excelente</option>
+                                <option value="bueno">Bueno</option>
+                                <option value="regular">Regular</option>
+                                <option value="malo">Malo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3 border-warning ">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>9. ¿Cómo calificaría el desplazamiento entre los 5 pisos del centro tutorial?</b></h5>
+                        <div class="form-group">
+                            <select class="form-control" id="floorMovementRating" required>
+                                <option value="">Seleccione</option>
+                                <option value="excelente">Excelente</option>
+                                <option value="bueno">Bueno</option>
+                                <option value="regular">Regular</option>
+                                <option value="malo">Malo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-warning btn-lg">Enviar</button>
+            </form>
+        </div>
+
+        <div id="thankYou" style="display: none;">
+            <h2 class="text-black">¡Gracias por participar, <span id="userName"></span>!</h2>
+            <p><b>!!Tu respuesta ha sido enviada con éxito!!</b></p>
+            <button id="restartButton" class="btn btn-warning btn-lg">Volver a la página de inicio</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
+

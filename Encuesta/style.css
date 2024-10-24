@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+   
+}
+
+.container {
+    display: flex;
+    background-image: url('udc1.jpg');
+    background-size: cover; 
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh; /* Centrar verticalmente */
+    
+}
+
+#welcome {
+    background-color: #f1600b; /* Fondo blanco para el contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin: auto; /* Centrar horizontalmente */
+    width: 90%; /* Ancho del contenedor */
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    
+}
+
+
+.form-group {
+    display: flex; /* Alinear el título y el input */
+    align-items: center; /* Alinear verticalmente */
+    
+}
+
+.form-group label {
+    flex: 0 0 200px; /* Ancho fijo para el label */
+    margin-right: 10px; /* Espacio entre label y input */
+}
+
+input[type="text"] {
+    width: 500px;
+    
+}
+.form-check-label {
+    width: 140px;
+  
+    
+}
+.form-check-input {
+    margin-right: 100px; /* Espacio reducido entre el botón y el label */
+    
+}
+
+
+#thankYou{
+    background-color: rgba(236, 133, 15, 0.699);
+    margin: 100px;
+    border: 0cap;
+
+}
